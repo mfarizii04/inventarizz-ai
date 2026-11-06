@@ -1,0 +1,31 @@
+package com.rizzkkonen.inventarizz.config;
+
+public class UserSession {
+    private static int userId;
+    private static String user;
+    private static String role;
+
+    public static void setSession(int id, String username, String userRole) {
+        userId = id;
+        user = username;
+        role = userRole;
+    }
+
+    public static int getUserId() {
+        return userId;
+    }
+
+    public static String getUser() {
+        return user;
+    }
+
+    public static String getRole() {
+        return role;
+    }
+
+    public static void clearSession() {
+        userId = 0;
+        user = null;
+        role = null;
+    }
+}
