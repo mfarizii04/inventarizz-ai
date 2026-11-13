@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database Connection Settings -->
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/db_belajar?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password"></property>
+
+        <!-- JDBC Connection Pool settings -->
+        <property name="connection.pool_size">5</property>
+
+        <!-- SQL Dialect & Logging -->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="show_sql">false</property>
+        <property name="format_sql">true</property>
+
+        <!-- Schema Update -->
+        <property name="hbm2ddl.auto">update</property>
+
+        <!-- Annotated Entity Classes -->
+        <mapping class="com.rizzkkonen.inventarizz.model.User"/>
+        <mapping class="com.rizzkkonen.inventarizz.model.AsetIT"/>
+        <mapping class="com.rizzkkonen.inventarizz.model.Ticket"/>
+        <mapping class="com.rizzkkonen.inventarizz.model.SSLCertificate"/>
+    </session-factory>
+</hibernate-configuration>
